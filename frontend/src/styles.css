@@ -1,0 +1,41 @@
+:root{--bg:#FAF8F2;--cd:#FFFDF8;--ink:#2B2620;--mu:#7A7166;--ln:#E4DDCF;--ru:#B0563F;--rt:#F3E1DA;--yl:#F4D77A;--yt:#FBF0C8;--on:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1E1A16;--cd:#28231D;--ink:#F1ECE2;--mu:#A59B8D;--ln:#3A342C;--ru:#E08A72;--rt:#3A2620;--yl:#C9A93F;--yt:#3B3214;--on:#1E1A16}}
+:root[data-theme="dark"]{--bg:#1E1A16;--cd:#28231D;--ink:#F1ECE2;--mu:#A59B8D;--ln:#3A342C;--ru:#E08A72;--rt:#3A2620;--yl:#C9A93F;--yt:#3B3214;--on:#1E1A16}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif}
+
+.hw{font-family:Caveat,'Bradley Hand',cursive;font-weight:700}
+.row{display:flex;align-items:center;gap:8px}.sp{justify-content:space-between}
+.mu{font-size:12px;color:var(--mu)}
+.note{background:var(--cd);border:1px solid var(--ln);border-radius:6px 6px 14px 14px;padding:14px 12px 12px;margin:0 0 16px;position:relative}
+.tape{position:absolute;top:-8px;left:50%;width:56px;height:16px;margin-left:-28px;background:var(--yl);opacity:.75;transform:rotate(-2deg)}
+.radar{border:1.5px solid var(--ink);transform:rotate(-.8deg);display:flex;gap:10px}
+.pin{position:absolute;top:-7px;left:16px;width:14px;height:14px;border-radius:50%;background:var(--ru);border:2px solid var(--bg)}
+.stamp{transform:rotate(5deg);border:2px solid var(--ru);color:var(--ru);border-radius:8px;padding:6px 8px;text-align:center;align-self:flex-start;flex:none;min-width:78px}
+.stamp.soon{background:var(--rt)}
+button{font:inherit;cursor:pointer}
+.btn{font-size:13px;padding:6px 12px;border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);display:inline-flex;gap:4px;align-items:center}
+.btn.r{background:var(--ru);border-color:var(--ru);color:var(--on)}.btn.on{background:var(--ink);color:var(--bg)}
+.btn.me{background:var(--yt);border-color:var(--yl)}
+.chip{font-size:12px;padding:3px 10px;border-radius:999px;border:1px solid var(--ln);background:var(--cd);color:var(--ink)}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.av{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;flex:none;border:1.5px dashed var(--ink)}
+.av.real{border:none;background:var(--rt);color:var(--ru)}
+.pulse{background:var(--yt);border-radius:8px;padding:6px 10px;margin:10px 0}
+.hot{width:56px;height:56px;border-radius:50%;border:2px dashed var(--ru);background:var(--yt);display:flex;align-items:center;justify-content:center;font-size:26px;margin:0 auto 3px;cursor:pointer}
+.hot.off{border-color:var(--ln);background:var(--cd)}.hotw{text-align:center;width:70px;font-size:11px;line-height:1.2;flex:none}
+.nav{position:fixed;left:0;right:0;bottom:0;background:var(--bg);border-top:1px solid var(--ln);padding:8px 0 calc(8px + env(safe-area-inset-bottom,0px))}
+.nav div{max-width:430px;margin:0 auto;display:flex;justify-content:space-around;align-items:center}
+.nav button{border:0;background:none;color:var(--mu);font-size:11px;display:flex;flex-direction:column;align-items:center;gap:2px}.nav button.on{color:var(--ink)}
+.nav .plus{width:48px;height:48px;border-radius:50%;background:var(--ru);color:var(--on);font-size:28px;line-height:1;justify-content:center}
+input,textarea{font:inherit;width:100%;border:1px solid var(--ln);background:var(--cd);color:var(--ink);border-radius:10px;padding:9px 11px}
+textarea{min-height:84px;resize:vertical}
+.tile{flex:1;border:1px dashed var(--ru);border-radius:10px;padding:10px 4px;background:var(--cd);color:var(--ink);font-size:12px}
+.tog{width:44px;height:25px;border-radius:13px;background:var(--ln);position:relative;border:0;flex:none}.tog:after{content:"";position:absolute;top:3px;left:3px;width:19px;height:19px;border-radius:50%;background:var(--on);transition:.15s}
+.tog.on{background:var(--ru)}.tog.on:after{left:22px}
+.b{max-width:80%;padding:8px 12px;margin:0 0 8px;border-radius:14px}
+.them{background:var(--cd);border:1px solid var(--ln)}.mine{background:var(--ink);color:var(--bg);margin-left:auto}
+h2{margin:0}
+select{font:inherit;border:1px solid var(--ln);background:var(--cd);color:var(--ink);border-radius:999px;padding:3px 8px;font-size:12px}
+#root{max-width:430px;margin:0 auto;min-height:100vh;padding:14px 14px 96px}
+button:disabled{opacity:.5;cursor:default}

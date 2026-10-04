@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      SECRET_KEY: ${SECRET_KEY:?Set SECRET_KEY in .env (any long random string)}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      CLOUDINARY_URL: ${CLOUDINARY_URL:-}
+    volumes: ["studypulse-data:/data"]
+volumes:
+  studypulse-data:
